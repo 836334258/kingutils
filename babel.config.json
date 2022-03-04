@@ -1,0 +1,3 @@
+{
+  "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]] // 在当前的node环境下运行，使用package.json
+}
