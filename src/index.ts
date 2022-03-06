@@ -1,10 +1,12 @@
-import arrayEqual from './array/arrayEqual'
+const r = require.context('./', true, /^\.\/.+\/.+\.ts$/)
+const modules: Record<string, any> = {}
 
-function hello() {
-  console.log('hello')
-}
+r.keys().forEach((key: string) => {
+  const moudleName = key.substring(
+    key.lastIndexOf('/') + 1,
+    key.lastIndexOf('.')
+  )
+  modules[moudleName] = r(key as keyof typeof r).default
+})
 
-export default {
-  hello,
-  arrayEqual,
-} as const
+export default modules

@@ -79,6 +79,7 @@ export default {
   //   "json",
   //   "node"
   // ],
+  moduleFileExtensions: ['js', 'ts', 'tsx'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -122,7 +123,7 @@ export default {
   // ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
-  // runner: "jest-runner",
+  runner: 'jest-runner-tsc',
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],

@@ -5,7 +5,10 @@
  * @param {Array} arr2
  * @returns {Boolean}
  */
-export default function arrayEqual(arr1: any[], arr2: any[]): boolean {
+export default function arrayEqual(
+  arr1: Array<any>,
+  arr2: Array<any>
+): boolean {
   if (arr1 === arr2) return true
 
   if (arr1.length !== arr2.length) return false

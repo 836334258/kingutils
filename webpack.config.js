@@ -39,8 +39,4 @@ export default {
       '@': path.resolve('src'),
     },
   },
-  devServer: {
-    compress: true,
-    port: 9000,
-  },
 }
