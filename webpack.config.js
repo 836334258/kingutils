@@ -4,14 +4,16 @@ import path from 'path'
 export default {
   mode: 'development',
   entry: path.resolve('src', 'index.ts'),
+  experiments: {
+    outputModule: true,
+  },
   output: {
     filename: `${pkg.name}.min.js`,
     path: path.resolve('dist'),
     library: {
-      name: `${pkg.name}`,
-      type: 'umd',
-      export: 'default', // 不使用default会导致kingutils.hello()出错
+      type: 'module',
     },
+    module: true,
   },
   module: {
     rules: [
@@ -36,5 +38,9 @@ export default {
     alias: {
       '@': path.resolve('src'),
     },
+  },
+  devServer: {
+    compress: true,
+    port: 9000,
   },
 }

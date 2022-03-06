@@ -1,17 +1,23 @@
 {
   "name": "kingutils",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "king的函数集合",
   "type": "module",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "default": "./dist/kingutils.min.js"
+    }
+  },
   "workspaces": [
     "play"
   ],
   "scripts": {
+    "dev": "webpack serve",
     "build": "node --experimental-json-modules script/build.js",
     "prepare": "husky install",
     "test": "jest",
-    "play": "pnpm -C play dev"
+    "play": "pnpm -C play dev",
+    "addUser": "npm adduser  --registry=https://registry.npmjs.org/"
   },
   "keywords": [
     "util",
@@ -42,5 +48,8 @@
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

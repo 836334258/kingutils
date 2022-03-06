@@ -6395,7 +6395,7 @@ packages:
       {
         integrity: sha512-5y8A56jg7XVQx2mbv1lu49NR4dokRnhZYTtL+KGfaa27uq4pSTXkwQkFJl4pkRMyNFz/EtYDSkiiEHx3F7UN6g==,
         registry: https://registry.npm.taobao.org/,
-        tarball: https://registry.npmmirror.com/mime-db/download/mime-db-1.51.0.tgz,
+        tarball: https://registry.npmmirror.com/mime-db/-/mime-db-1.51.0.tgz,
       }
     name: mime-db
     version: 1.51.0
