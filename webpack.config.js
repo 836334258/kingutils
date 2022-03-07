@@ -2,7 +2,7 @@ import pkg from './package.json'
 import path from 'path'
 
 export default {
-  mode: 'development',
+  mode: 'production',
   entry: path.resolve('src', 'index.ts'),
   experiments: {
     outputModule: true,
@@ -22,6 +22,9 @@ export default {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'esbuild-loader',
+          options: {
+            target: 'esnext',
+          },
         },
       },
       {
@@ -43,4 +46,5 @@ export default {
       '@': path.resolve('src'),
     },
   },
+  devtool: 'source-map',
 }

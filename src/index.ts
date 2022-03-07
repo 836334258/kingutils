@@ -6,7 +6,8 @@ r.keys().forEach((key: string) => {
     key.lastIndexOf('/') + 1,
     key.lastIndexOf('.')
   )
-  modules[moudleName] = r(key as keyof typeof r).default
+  modules[moudleName] =
+    r(key as keyof typeof r).default ?? r(key as keyof typeof r)
 })
 
 export default modules

@@ -9,8 +9,11 @@
   <body>
     <script type="module">
       import kingutils from '../dist/kingutils.min.js'
-
-      console.log(kingutils.arrayEqual([1], [2]))
+      console.log(kingutils)
+      console.log(kingutils.arrayEqual([1]))
+      // console.log(kingutils.unique([1,2,3,3,2,1]))
+      console.log(kingutils.arrayLast(123))
+      console.log(kingutils.arrayRemove([1, 2, 3, 4], (item) => item > 2))
     </script>
   </body>
 </html>
