@@ -21,14 +21,18 @@ export default {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'esbuild-loader',
         },
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader',
+          loader: 'esbuild-loader',
+          options: {
+            loader: 'ts',
+            target: 'esnext',
+          },
         },
       },
     ],
