@@ -1,4 +1,4 @@
-const r = require.context('./', true, /^\.\/.+\/.+\.ts$/)
+const r = require.context('.', false, /(?<!index)\.ts$/)
 const modules: Record<string, any> = {}
 
 r.keys().forEach((key: string) => {
@@ -6,8 +6,8 @@ r.keys().forEach((key: string) => {
     key.lastIndexOf('/') + 1,
     key.lastIndexOf('.')
   )
-  modules[moudleName] =
-    r(key as keyof typeof r).default ?? r(key as keyof typeof r)
+  const rKey = Object.keys(r(key))[0]
+  modules[rKey] = r(key as keyof typeof r)[rKey]
 })
 
 export default modules

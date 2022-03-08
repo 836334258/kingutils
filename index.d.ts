@@ -1,24 +1,12 @@
-import { arrayLastType } from './src/array/arrayLast'
-declare namespace kingutils {
-  /**
-   * 判断两个数组是否相等
-   *
-   * @param {Array} arr1
-   * @param {Array} arr2
-   * @return {Boolean}
-   */
-  export declare function arrayEqual(
-    arr1: Array<any>,
-    arr2: Array<any>
-  ): boolean
-  export declare function arrayLast<T>(arr: T[]): T | undefined
-  export declare function arrayRemove<T>(
-    arr: T[],
-    fn: (value: T, index: number, array: T[]) => unknown
-  ): T[]
-  export declare function arrayUnique(arr: any[]): any[]
-}
+// import { KArray } from './src/array';
+// export namespace kingutils{
+//   export namespace array{
+//     export import {unique,last,remove,equal}  from './src/array'
+//   }
+// }
 
-declare module 'kingutils' {
-  export = kingutils
-}
+// export module "kingutils"{
+//   export = kingutils
+// }
+
+export { createArray } from './src/array'
