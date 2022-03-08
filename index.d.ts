@@ -10,3 +10,4 @@
 // }
 
 export { createArray } from './src/array'
+export { createCollection } from './src/collection'

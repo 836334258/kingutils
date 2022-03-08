@@ -3,6 +3,7 @@ export interface IArray {
   remove<T>(arr: T[], fn: (value: T, index: number, array: T[]) => unknown): T[]
   last(arr: any[]): any[] | undefined
   equal(arr1: Array<any>, arr2: Array<any>): boolean
+  take(arr: any[], n: number): any[]
 }
 
 export function createArray(): IArray {
@@ -71,5 +72,19 @@ class KArray implements IArray {
     }
 
     return true
+  }
+
+  /**
+   * 创建一个数组切片，从array数组的起始元素开始提取n个元素
+   *
+   * @param arr - 数组
+   * @param n - 起始位置
+   * @returns {Array}
+   */
+  take(arr: any[], n: number = 1): any[] {
+    if (!Array.isArray(arr)) {
+      return []
+    }
+    return Array.prototype.slice.call(arr, n < 0 ? 0 : n)
   }
 }
