@@ -1,6 +1,6 @@
 {
   "name": "kingutils",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "king的函数集合",
   "type": "module",
   "types": "dist/kingutils.d.ts",
@@ -20,7 +20,7 @@
     "test": "jest -c jest.config.mjs",
     "play": "pnpm -C play dev",
     "addUser": "npm adduser  --registry=https://registry.npmjs.org/",
-    "publish": "api-extractor run --local --verbose && npm publish"
+    "publish": "build:dts && npm publish"
   },
   "keywords": [
     "util",
