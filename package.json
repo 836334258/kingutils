@@ -1,6 +1,6 @@
 {
   "name": "kingutils",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "king的函数集合",
   "type": "module",
   "types": "dist/kingutils.d.ts",
@@ -19,7 +19,8 @@
     "prepare": "husky install",
     "test": "jest -c jest.config.mjs",
     "play": "pnpm -C play dev",
-    "addUser": "npm adduser  --registry=https://registry.npmjs.org/"
+    "addUser": "npm adduser  --registry=https://registry.npmjs.org/",
+    "publish": "api-extractor run --local --verbose && npm publish"
   },
   "keywords": [
     "util",
