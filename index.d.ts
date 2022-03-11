@@ -11,3 +11,4 @@
 
 export { createArray } from './src/array'
 export { createCollection } from './src/collection'
+export { createUtil } from './src/util'

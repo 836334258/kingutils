@@ -1,6 +1,6 @@
 import ora from 'ora'
 import rm from 'rimraf'
-import pkg from '../package.json'
+import pkg from '../package.json' assert { type: 'json' }
 import path from 'path'
 import webpack from 'webpack'
 import config from '../webpack.config.js'

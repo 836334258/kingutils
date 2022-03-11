@@ -4,6 +4,9 @@
   "description": "king的函数集合",
   "type": "module",
   "types": "dist/kingutils.d.ts",
+  "engines": {
+    "node": ">=16.14.0"
+  },
   "exports": {
     ".": {
       "default": "./dist/kingutils.min.js"
@@ -19,7 +22,8 @@
     "prepare": "husky install",
     "test": "jest -c jest.config.mjs",
     "play": "pnpm -C play dev",
-    "addUser": "npm adduser  --registry=https://registry.npmjs.org/"
+    "addUser": "npm adduser  --registry=https://registry.npmjs.org/",
+    "clean": "rimraf dist pnpm-lock.yaml node_modules"
   },
   "keywords": [
     "util",
