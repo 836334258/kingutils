@@ -1,11 +1,11 @@
 import ora from 'ora'
 import rm from 'rimraf'
-import pkg from '../package.json' assert { type: 'json' }
-import path from 'path'
 import webpack from 'webpack'
 import config from '../webpack.config.js'
 import process from 'process'
 import chalk from 'chalk'
+import pkg from '../package.json' assert { type: 'json' }
+import path from 'path'
 
 const building = ora({
   text: 'building',

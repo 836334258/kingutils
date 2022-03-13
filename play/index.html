@@ -8,7 +8,10 @@
   </head>
   <body>
     <script type="module">
-      import { createCollection } from '../dist/kingutils.min.js'
+      console.log(1111111)
+      import kingutils from '../dist/kingutils.min.js'
+      const a = new Map()
+      console.log(kingutils.createUtil().isMap(a))
       // console.log(createCollection);
       // console.log(kingutils)
       // console.log(kingutils.createArray().take([1, 2, 3], 2))
