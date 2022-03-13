@@ -20,7 +20,7 @@
     "test": "jest -c jest.config.mjs",
     "play": "pnpm -C play dev",
     "addUser": "npm adduser  --registry=https://registry.npmjs.org/",
-    "publish": "build:dts && npm publish"
+    "publish": "npm publish"
   },
   "keywords": [
     "util",
